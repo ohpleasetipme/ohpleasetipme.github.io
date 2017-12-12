@@ -6,10 +6,17 @@
     font-family: 'PT Serif', serif;
 }
 
-end.blink_me {
-  animation: blinker 1s linear infinite;
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
-
-@keyframes blinker {
-  50% { opacity: 0; }
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
