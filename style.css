@@ -2,7 +2,11 @@
   font-family: 'Pacifico', cursive;
 }
 
-span.blink_me {
+.address {
+    font-family: 'PT Serif', serif;
+}
+
+.blink_me {
   animation: blinker 1s linear infinite;
 }
 
