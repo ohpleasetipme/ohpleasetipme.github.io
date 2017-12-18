@@ -27,9 +27,13 @@ function copy(text) {
   $.notify("My address is in your clipboard! Thank you!", "success");
 }
 
-var local_info = $.getJSON('https://ip-api.com/json?callback=?', function(data) {
+var local_info = 
+$.getJSON('//ipapi.co/json/', function(data) {
   console.log(JSON.stringify(data, null, 2));
 });
+// $.getJSON('https://ip-api.com/json?callback=?', function(data) {
+//   console.log(JSON.stringify(data, null, 2));
+// });
 
 function get_location () {
     return (local_info.responseJSON.city + " in " + local_info.responseJSON.country);
