@@ -63,11 +63,11 @@ let do_a_good_deed () =
 
 let religious_reason () =
   show
-"If you are a religious person, charity is something you must do anyway.
- If you are not a religious person, just follow Pascal's advice: just in case
- God exists, being charitable will help you in the after life while not being
- charitable will probably hurt you!
-"
+    "If you are a religious person, charity is something you must do anyway.
+     If you are not a religious person, let me introduce you to Pascal's advice: just in case
+     God exists, being charitable will help you in the after life while not being
+     charitable will probably hurt you!
+     "
 
 let take_pity_of_my_situation () =
   show
