@@ -54,12 +54,28 @@ let in_the_meantime_btc_is_moving () =
   ""
 
 let do_a_good_deed () =
-  ""
+  show
+"It is simple: doing a good deed is very important for your self-esteem.
+ Since you are rich, it is now the time to take care of yourself. Self-esteem
+ is one important aspect of self-caring. Let me help you!
+"
 
 let religious_reason () =
-  ""
+  show
+"If you are a religious person, charity is something you must do anyway.
+ If you are not a religious person, just follow Pascal's advice: just in case
+ God exists, being charitable will help you in the after life while not being
+ charitable will probably hurt you!
+"
 
 let take_pity_of_my_situation () =
+show
+  "Consider my situation, just a sec. I am making just enough money to pay
+   my rent and to provide basic needs for my two kids. If you tip me, I may
+   be able to buy candy for my daughter and my son. Do you picture them
+   smiling? I do. So, please, tip me!"
+
+let i_am_skilled_in_coding () =
   ""
 
 let reasons =
@@ -69,9 +85,9 @@ let reasons =
            threat;
            tell_a_joke;
            tell_a_joke;
-           tell_a_joke;
-           tell_a_joke;
-           tell_a_joke;
+           do_a_good_deed;
+           religious_reason;
+           take_pity_of_my_situation
          |])
 
 let continuation_messages = [
