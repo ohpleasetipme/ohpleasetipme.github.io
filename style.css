@@ -2,6 +2,19 @@
   font-family: 'Pacifico', cursive;
 }
 
+body {
+  margin-left: 15%;
+  margin-right: 15%;
+  border: 1px solid;
+  padding-left: 5%;
+  padding-right: 5%;
+/*  background-color: rgb(0, 0, 0); */
+}
+
+.contents {
+/*  background-color: rgb(255, 255, 255); */
+}
+
 .address {
     font-family: 'PT Serif', serif;
 }
@@ -10,6 +23,7 @@
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
+
 @keyframes blink-animation {
   to {
     visibility: hidden;
@@ -19,4 +33,57 @@
   to {
     visibility: hidden;
   }
+}
+
+@keyframes fadeAndScale {
+	from {
+		opacity: 0;
+		transform: scale(.9, .9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
+.talk {
+    animation-duration: .3s;
+    animation-name: fadeAndScale;
+    animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
+}
+
+.emph {
+    font-weight: bold;
+}
+
+.clickme {
+    color : rgb(200, 200, 255);
+    cursor: help;
+}
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 4px 4px 4px 4px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
 }

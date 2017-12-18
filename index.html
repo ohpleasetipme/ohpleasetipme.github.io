@@ -4,11 +4,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Please tip me</title>
+  <title>Oh please tip me with BTC! (Bitcoins related humor)</title>
   <meta name="description" content="A BTC tips.">
   <meta name="Mark Spencer">
   <link href="https://fonts.googleapis.com/css?family=PT+Serif|Pacifico" rel="stylesheet">
-
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="import.js"></script>
+  <script src="ohplease.js"></script>
+  <script src="notify.js"></script>
   <link rel="stylesheet" href="style.css">
 
   <!--[if lt IE 9]>
@@ -17,11 +20,15 @@
 </head>
 
 <body>
-<p>
-Oh please! Tip me at 
+<div class="contents">
+<p class="announce">
+Oh please! Tip me with BTC at
 <span class="address">17zurcGPSF6icMoeBoqaBM5XH3i1RH2MFq</span>
+<a class="btn" onclick="copy('17zurcGPSF6icMoeBoqaBM5XH3i1RH2MFq');">Copy</a>
+<span id="content"></span>
 <span id="end" class="blink">□</span>
 </p>
+</div>
 </body>
 </html>
 
