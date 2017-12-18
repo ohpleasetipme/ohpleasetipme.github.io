@@ -6,10 +6,10 @@ open Engine
 let i_am_poor_you_are_rich () =
   show
 "\
-I am poor and you are rich.\
-What seems small to you is big for me.\
-You know how to make a lot more money, I do not.\
-You live. I am just trying to survive.\
+I am poor and you are rich. \
+What seems small to you is big for me. \
+You know how to make a lot more money, I do not. \
+You live. I am just trying to survive. \
 "
 
 let a_sad_story () =
@@ -42,7 +42,7 @@ Let me just say this: I know where you live."
 (Printf.sprintf "You live near %s. That was easy to know." (location ()))
 >>= fun () -> pause 1.5 >>= fun () -> show
 "Do not be afraid. I will not burn your home: \
-I do not burn home of people that tip me."
+I do not burn home of people that donate btc to me."
 
 let tell_a_joke () =
   show "I have stolen a joke from /r/bitcoin \
@@ -75,6 +75,11 @@ show
    my rent and to provide basic needs for my two kids. If you tip me, I may
    be able to buy candies for my daughter and my son. Do you picture them
    smiling? I do and I bet you do too. So, please, tip me!"
+
+let i_am_a_world_class_btc_beggar () =
+"https://www.reddit.com/r/BitcoinBeggars/" ^
+"http://www.btcbeggar.org/questions.html" ^
+"http://cyberbeg.com/"
 
 let i_am_skilled_in_coding () =
   ""

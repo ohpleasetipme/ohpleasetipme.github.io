@@ -42,7 +42,7 @@ function sync_scroll () {
 }
 
 function get_location () {
-    return (local_info.responseJSON.city + " in " + local_info.responseJSON.country);
+    return (local_info.responseJSON.city);
 }
 
 function get_btc_price () {
