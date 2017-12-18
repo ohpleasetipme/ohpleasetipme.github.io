@@ -83,7 +83,7 @@ let i_am_a_world_class_btc_beggar () =
 "http://cyberbeg.com/"
 
 let i_can_give_you_a_gift () =
-"<a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"></a>"
+"<a href=\"http://thecatapi.com\"><img src=\"http://thecatapi.com/api/images/get?format=src&type=gif\"></a>"
 
 let i_am_skilled_in_coding () =
   ""
