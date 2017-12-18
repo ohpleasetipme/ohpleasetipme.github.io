@@ -48,7 +48,8 @@ let tell_a_joke () =
   show "I have stolen a joke from /r/bitcoin \
         since I cannot invent one by myself.
         Ready? Here it is."
->>= fun () -> pause 1. >>= fun () -> show (Jokes.next_joke ())
+  >>= fun () -> pause 1. >>= fun () -> 
+                show ("\"" ^ Jokes.next_joke () ^ "\"" ^ " Funny, right?")
 
 let in_the_meantime_btc_is_moving () =
   ""

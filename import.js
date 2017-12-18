@@ -36,10 +36,9 @@ $.getJSON('//ipapi.co/json/', function(data) {
 // });
 
 function sync_scroll () {
-   document.body.scrollTop = document.body.scrollHeight;
-    // $('html, body').animate({
-    //     scrollTop: $("#end").offset().top
-    // }, 2000);
+    $('html, body').animate({
+         scrollTop: $("#contents").offset().bottom
+    }, 2000);
 }
 
 function get_location () {
