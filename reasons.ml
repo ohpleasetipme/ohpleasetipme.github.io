@@ -96,7 +96,7 @@ let reasons =
 
 let continuation_messages = [
     "Still not convinced?";
-    "What? You want another reason? I have plenty reasons!";
+    "What? You want another reason?";
     "You are still there? Thank you for giving me another chance!";
     "No tip? I am sorry to see that. What about a new try?";
     "Do you want to see my secret weapon?"
