@@ -72,10 +72,13 @@ let take_pity_of_my_situation () =
 show
   "Consider my situation, just a sec. I am making just enough money to pay
    my rent and to provide basic needs for my two kids. If you tip me, I may
-   be able to buy candy for my daughter and my son. Do you picture them
-   smiling? I do. So, please, tip me!"
+   be able to buy candies for my daughter and my son. Do you picture them
+   smiling? I do and I bet you do too. So, please, tip me!"
 
 let i_am_skilled_in_coding () =
+  ""
+
+let it_is_christmas_season () =
   ""
 
 let reasons =
@@ -92,9 +95,9 @@ let reasons =
 
 let continuation_messages = [
     "Still not convinced?";
-    "What? You want another reason?";
+    "What? You want another reason? I have plenty reasons!";
     "You are still there? Thank you for giving me another chance!";
-    "No tip? Are you kidding me?";
+    "No tip? I am sorry to see that. What about a new try?";
     "Do you want to see my secret weapon?"
 ]
 
@@ -102,9 +105,11 @@ let rec push_reason () =
   match !reasons with
   | [] ->
      show
-    "I have no more arguments. You won. \
-     Maybe the fact that you won this battle is a good reason to tip me! \
-     Do not be afraid of paradox!";
+    "Well. OK. I have no more arguments. You won. 
+     Your resistance is impressive.
+     Maybe the fact that you won this battle is a good reason to tip me:
+     you must celebrate!
+     Do not be afraid of paradoxes! They make life so funny!";
   | r :: rs ->
      reasons := rs;
      r () >>= fun () ->
