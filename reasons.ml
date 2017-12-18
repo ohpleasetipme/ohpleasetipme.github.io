@@ -70,11 +70,12 @@ let religious_reason () =
 "
 
 let take_pity_of_my_situation () =
-show
-  "Consider my situation, just a sec. I am making just enough money to pay
-   my rent and to provide basic needs for my two kids. If you tip me, I may
-   be able to buy candies for my daughter and my son. Do you picture them
-   smiling? I do and I bet you do too. So, please, tip me!"
+  show
+    "Consider my situation, just a sec. I am making just enough money to pay \
+     my rent and to provide basic needs for my two kids. If you tip me, I may \
+     be able to offer some holidays to my daughter and to my son. They will \
+     see the world! Do you picture them smiling? I do and I bet you do too. \
+     So, please, tip me!"
 
 let i_am_a_world_class_btc_beggar () =
 "https://www.reddit.com/r/BitcoinBeggars/" ^
