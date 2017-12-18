@@ -82,13 +82,19 @@ let i_am_skilled_in_coding () =
 let it_is_christmas_season () =
   ""
 
+let honesty () =
+  show
+    "I am honest: I could have put a javascript coin miner on this page \
+     but I did not. Being honest is the normal thing to do, and there is no \
+     reward to be expected for that. Or maybe there is? Up to you!"
+
 let reasons =
   ref (shuffle [|
            i_am_poor_you_are_rich;
            a_sad_story;
            threat;
            tell_a_joke;
-           tell_a_joke;
+           honesty;
            do_a_good_deed;
            religious_reason;
            take_pity_of_my_situation
