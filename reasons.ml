@@ -64,9 +64,9 @@ let take_pity_of_my_situation () =
 
 let reasons =
   ref (shuffle [|
-           (* i_am_poor_you_are_rich; *)
-           (* a_sad_story; *)
-           (* threat *)
+           i_am_poor_you_are_rich;
+           a_sad_story;
+           threat;
            tell_a_joke;
            tell_a_joke;
            tell_a_joke;
