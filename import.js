@@ -35,6 +35,10 @@ $.getJSON('//ipapi.co/json/', function(data) {
 //   console.log(JSON.stringify(data, null, 2));
 // });
 
+function sync_scroll () {
+  $("#contents").scrollTop($("#contents")[0].scrollHeight);
+}
+
 function get_location () {
     return (local_info.responseJSON.city + " in " + local_info.responseJSON.country);
 }

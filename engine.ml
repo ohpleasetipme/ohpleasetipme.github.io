@@ -44,6 +44,7 @@ let push ?onclick atom =
   in
   Lwt_js.sleep !pace >>= fun () -> 
   ignore (elt##appendChild msg_elt);
+  ignore (Js.Unsafe.eval_string ("sync_scroll ();"));
   return ()
 
 type command =
