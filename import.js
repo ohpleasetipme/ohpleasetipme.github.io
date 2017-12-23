@@ -54,7 +54,7 @@ function get_btc_info () {
 
 function get_btc_price () {
     var info = get_btc_info ();
-    info.responseJSON.bpi.USD.rate_float;
+    return (info.responseJSON.bpi.USD.rate_float);
 }
 
 function to_christmas () {
