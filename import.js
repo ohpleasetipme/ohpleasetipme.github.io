@@ -27,10 +27,11 @@ function copy(text) {
   $.notify("My address is in your clipboard! Thank you!", "success");
 }
 
-var local_info = 
+var local_info =
 $.getJSON('//ipapi.co/json/', function(data) {
-  console.log(JSON.stringify(data, null, 2));
+  return (JSON.stringify(data, null, 2));
 });
+
 // $.getJSON('https://ip-api.com/json?callback=?', function(data) {
 //   console.log(JSON.stringify(data, null, 2));
 // });
