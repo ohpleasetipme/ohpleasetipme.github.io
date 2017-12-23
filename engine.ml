@@ -19,6 +19,7 @@ let class_of_style = function
 
 type atom =
   | Msg of style * string
+  | Link of string * string
   | Elt of Dom_html.element Js.t
 
 let push ?onclick atom =
@@ -40,6 +41,11 @@ let push ?onclick atom =
               a##.className := Js.string "talk clickme";
               (a :> Dom.node Js.t)
            end
+        | Link (url, caption) ->
+           let a = createA document in
+           a##.href := Js.string url;
+           a##.innerHTML := Js.string caption;
+           (a :> Dom.node Js.t)
         | Elt e -> (e :> Dom.node Js.t)
   in
   Lwt_js.sleep !pace >>= fun () -> 
@@ -50,6 +56,7 @@ let push ?onclick atom =
 type command =
   | Continuation of string * (unit -> unit Lwt.t)
   | Show of string
+  | ShowLink of string * string
   | NewLine
 
 let queue = Queue.create ()
@@ -74,6 +81,7 @@ let rec produce_text () =
     | Show text -> push_typing text
     | Continuation (text, k) -> push ~onclick:k (Msg (Normal, text))
     | NewLine -> push (Elt (createBr document))
+    | ShowLink (url, caption) -> push (Link (url, caption))
     end >>= produce_text
   ) else return ()
 
@@ -84,5 +92,5 @@ let push x =
 let continue text reason = push (Continuation (text, reason))
 let show text = push (Show text)
 let newline () = push NewLine
-
+let link url caption = push (ShowLink (url, caption))
 let loop = produce_text
