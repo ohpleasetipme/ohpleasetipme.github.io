@@ -46,7 +46,7 @@ function get_location () {
 }
 
 function get_btc_price () {
-    var data = 0.;
+    var data = 1.;
     // $.ajax({
     //     async: true,
     //     type: "GET",

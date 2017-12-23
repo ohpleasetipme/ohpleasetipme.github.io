@@ -64,8 +64,7 @@ let you_lose_some_money_so_give_me_some () =
 
 
 let bitcoin_price () =
-  (* float_of_string (Js.(to_string (Unsafe.eval_string "get_btc_price ();"))) *)
-  0.
+  Js.(to_float (Unsafe.eval_string "get_btc_price ();"))
 
 let initial_bitcoin_value =
   bitcoin_price ()
@@ -193,7 +192,7 @@ let continuation_messages = [
     "No tip? I am sorry to see that. What about a new try?";
     "Do you want to see my secret weapon?";
     "Getting more reasons to tip me is like an addiction for you now, right?";
-    "Oh Oh, you are a tough one!"
+    "Oh you are a tough one!"
 ]
 
 let rec push_reason () =
