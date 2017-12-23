@@ -47,16 +47,10 @@ function get_location () {
 }
 
 function get_btc_price () {
-    var data = 1.;
-    // $.ajax({
-    //     async: true,
-    //     type: "GET",
-    //     url: "https://www.bitstamp.net/api/ticker/",
-    //     success: function(result) {
-    //         data = result.last;
-    //     }
-    // });
-    return data;
+    $.getJSON('//api.coindesk.com/v1/bpi/currentprice.json', function (data) {
+	console.log (JSON.stringify(data, null, 2));
+	return data.bpi.USD.rate_float;
+    }
 }
 
 function to_christmas () {

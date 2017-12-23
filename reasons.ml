@@ -62,6 +62,8 @@ let you_lose_some_money_so_give_me_some () =
         be entirely honest to ask you for money while knowing that you \
         just lost some in the meantime. Any reward for this gentle attention?"
 
+let nothing_changed () =
+  show "So you are as rich as before! Celebrate this with me!"
 
 let bitcoin_price () =
   Js.(to_float (Unsafe.eval_string "get_btc_price ();"))
@@ -79,7 +81,9 @@ let in_the_meantime_btc_is_moving () =
        "By the way, when you arrived on that website page, BTC was worth $%f"
        initial_bitcoin_value)
   >>= fun () -> show (Printf.sprintf "and now its price is around $%f.\n" now)
-  >>= fun () -> if initial_bitcoin_value < now then
+  >>= fun () -> if initial_bitcoin_value = now then 
+                  nothing_changed ()
+                else if initial_bitcoin_value < now then
                   you_won_money_so_give_me_some ()
                 else
                   you_lose_some_money_so_give_me_some ()
