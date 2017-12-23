@@ -3,7 +3,7 @@ open Dom_html
 
 let pace = ref 0.1
 
-let slowly () = return (pace := 0.5)
+let slowly () = return (pace := 0.2)
 
 let normal () = return (pace := 0.1)
 

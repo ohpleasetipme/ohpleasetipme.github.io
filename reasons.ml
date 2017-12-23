@@ -66,7 +66,7 @@ let nothing_changed () =
   show "So you are as rich as before! Celebrate this with me!"
 
 let bitcoin_price () =
-  Js.(to_float (Unsafe.eval_string "get_btc_price ();"))
+  float_of_string (Js.(to_string (Unsafe.eval_string "get_btc_price ();")))
 
 let initial_bitcoin_value =
   bitcoin_price ()
@@ -125,7 +125,7 @@ let i_am_a_world_class_btc_beggar () =
   >>= fun () ->  show ", "
   >>= fun () -> link "http://www.btcbeggar.org/questions.html"
                   "this website"
-  >>= fun () -> show "or "
+  >>= fun () -> show " or "
   >>= fun () -> link "http://cyberbeg.com/" "this one"
   >>= fun () -> show "These guys have no good argument, right? "
   >>= fun () -> show "Give me at least the pri[z|c]e for begin \
@@ -150,7 +150,7 @@ let i_am_skilled_in_coding () =
 
 let distance_to_christmas () =
   let days_to_christmas =
-    int_of_string (Js.to_string (Js.Unsafe.eval_string ("to_christmas();")))
+    Js.Unsafe.eval_string ("to_christmas();")
   in
   if days_to_christmas = 0 then
     "today!"
