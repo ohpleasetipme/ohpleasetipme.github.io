@@ -48,7 +48,7 @@ function get_location () {
 
 function get_btc_price () {
     return ($.getJSON('//api.coindesk.com/v1/bpi/currentprice.json', function (data) {
-	return (data.responseJSON.bpi.USD.rate_float);
+	return (JSON.stringify(data, null, 2)).responseJSON.bpi.USD.rate_float;
     }));
 }
 
