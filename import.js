@@ -47,14 +47,14 @@ function get_location () {
 
 function get_btc_price () {
     var data = 0.;
-    $.ajax({
-        async: true,
-        type: "GET",
-        url: "https://www.bitstamp.net/api/ticker/",
-        success: function(result) {
-            data = result.last;
-        }
-    });
+    // $.ajax({
+    //     async: true,
+    //     type: "GET",
+    //     url: "https://www.bitstamp.net/api/ticker/",
+    //     success: function(result) {
+    //         data = result.last;
+    //     }
+    // });
     return data;
 }
 
