@@ -46,11 +46,14 @@ function get_location () {
     return (local_info.responseJSON.city);
 }
 
-function get_btc_price () {
+function get_btc_info () {
     $.getJSON('//api.coindesk.com/v1/bpi/currentprice.json', function (data) {
-	console.log (JSON.stringify(data, null, 2));
-	return data.responseJSON.bpi.USD.rate_float;
+	return(JSON.stringify(data, null, 2));
     });
+}
+
+function get_btc_price () {
+    return (get_btc_info ()).responseJSON.bpi.USD.rate_float;
 }
 
 function to_christmas () {
