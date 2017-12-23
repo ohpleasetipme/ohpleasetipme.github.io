@@ -141,8 +141,8 @@ let i_can_give_you_a_gift () =
          />"
   >>= newline
   >>= fun () -> show
-                  "I have been told that this is what people are looking for \
-                   on the Internet."
+                  "I have been told that that kind of kitty is what people are \
+                   looking for on the Internet. Let me do it for you!"
 
 (* FIXME *)
 let i_am_skilled_in_coding () =
