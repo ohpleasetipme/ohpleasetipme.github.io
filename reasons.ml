@@ -175,15 +175,15 @@ let reasons =
            i_am_poor_you_are_rich;
            a_sad_story;
            threat;
-           tell_a_joke;
-           honesty;
-           do_a_good_deed;
-           religious_reason;
-           take_pity_of_my_situation;
-           it_is_christmas_season;
-           i_can_give_you_a_gift;
-           i_am_a_world_class_btc_beggar;
-           in_the_meantime_btc_is_moving;
+           (* tell_a_joke; *)
+           (* honesty; *)
+           (* do_a_good_deed; *)
+           (* religious_reason; *)
+           (* take_pity_of_my_situation; *)
+           (* it_is_christmas_season; *)
+           (* i_can_give_you_a_gift; *)
+           (* i_am_a_world_class_btc_beggar; *)
+           (* in_the_meantime_btc_is_moving; *)
          |])
 
 let continuation_messages = [
