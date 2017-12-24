@@ -122,7 +122,7 @@ let take_pity_of_my_situation () =
 
 let i_am_a_world_class_btc_beggar () =
   show
-    "There people out there that try to be BTC beggars... Look
+    "There are people out there that try to be BTC beggars... Look
      for instance at "
   >>= fun () -> link "https://www.reddit.com/r/BitcoinBeggars/"
                   "this reddit group"
@@ -167,7 +167,7 @@ let distance_to_christmas () =
 
 let it_is_christmas_season () =
   Printf.sprintf
-    "Christmas is %s It is the right time to be generous and helpful!"
+    "Christmas %s It is the right time to be generous and helpful!"
     (distance_to_christmas ())
   |> show
 
