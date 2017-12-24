@@ -46,15 +46,16 @@ function get_location () {
     return (local_info.responseJSON.city);
 }
 
+var btc_price = 0.;
+
 function get_btc_info () {
-    return ($.getJSON('//api.coindesk.com/v1/bpi/currentprice.json', function (data) {
-	return (JSON.stringify(data, null, 2));
-    }));
+    $.getJSON('//api.coindesk.com/v1/bpi/currentprice.json').then (function (json) { 
+	btc_price = json.bpi.USD.rate_float; 
+    });
 }
 
 function get_btc_price () {
-    var info = get_btc_info ();
-    return (info.responseJSON.bpi.USD.rate_float);
+    return btc_price;
 }
 
 function to_christmas () {

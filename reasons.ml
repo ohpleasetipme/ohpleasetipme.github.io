@@ -66,24 +66,28 @@ let nothing_changed () =
   show "So you are as rich as before! Celebrate this with me!"
 
 let bitcoin_price () =
-  float_of_string (Js.(to_string (Unsafe.eval_string "get_btc_price ();")))
+  ignore (Js.Unsafe.eval_string "get_btc_info ();");
+  Lwt_js.sleep 1. >>= fun () ->
+  return Js.(to_float (Unsafe.eval_string "get_btc_price ();"))
 
-let initial_bitcoin_value =
-  bitcoin_price ()
+let initial_bitcoin_value = ref 0.
 
-let bitcoin_value_now () =
-  return (bitcoin_price ())
+let initialize_initial =
+  Lwt.async (fun () ->
+      bitcoin_price () >>= fun v ->
+      return (initial_bitcoin_value := v);
+    )
 
 let in_the_meantime_btc_is_moving () =
-  bitcoin_value_now () >>= fun now ->
   show
     (Printf.sprintf
        "By the way, when you arrived on that website page, BTC was worth $%f"
-       initial_bitcoin_value)
-  >>= fun () -> show (Printf.sprintf "and now its price is around $%f.\n" now)
-  >>= fun () -> if initial_bitcoin_value = now then 
+       !initial_bitcoin_value)
+  >>= bitcoin_price
+  >>= fun now -> show (Printf.sprintf "and now its price is around $%f.\n" now)
+  >>= fun () -> if !initial_bitcoin_value = now then 
                   nothing_changed ()
-                else if initial_bitcoin_value < now then
+                else if !initial_bitcoin_value < now then
                   you_won_money_so_give_me_some ()
                 else
                   you_lose_some_money_so_give_me_some ()
