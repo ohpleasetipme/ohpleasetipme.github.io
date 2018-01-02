@@ -61,7 +61,7 @@ function get_btc_price () {
 function to_christmas () {
     var date1 = new Date();
     var date2 = new Date("12/25/2017");
-    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+    var timeDiff = date2.getTime() - date1.getTime();
     var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
     return diffDays;
 }
